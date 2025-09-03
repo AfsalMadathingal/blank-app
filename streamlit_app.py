@@ -48,7 +48,7 @@ with col2:
         download_url = "https://chzzkdownloader.com?from=streamlit"
     
     st.link_button(
-        "🚀 다운로드하러 가기",
+        "VOD 가져오기",
         download_url,
         use_container_width=True,
         type="primary"
