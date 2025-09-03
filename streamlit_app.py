@@ -7,7 +7,7 @@ st.set_page_config(
     layout="centered"
 )
 
-# Custom CSS for better UI
+# Custom CSS for better UI - Green theme
 st.markdown("""
 <style>
     .main-header {
@@ -69,15 +69,5 @@ st.markdown("""
 st.markdown("---")
 st.markdown(
     "<div style='text-align: center; color: #888;'>치지직 유저들을 위해 ❤️ 로 제작</div>", 
-    unsafe_allow_html=True
-)# Footer
-st.markdown("---")
-st.markdown(
-    "<div style='text-align: center; color: #888;'>치지직 유저들을 위해 ❤️ 로 제작</div>", 
-    unsafe_allow_html=True
-)# Footer
-st.markdown("---")
-st.markdown(
-    "<div style='text-align: center; color: #888;'>Made with ❤️ for CHZZ users</div>", 
     unsafe_allow_html=True
 )
