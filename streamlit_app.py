@@ -38,14 +38,13 @@ st.markdown('<p class="subtitle">Download your favorite CHZZ streams easily!</p>
 col1, col2, col3 = st.columns([1, 2, 1])
 
 with col2:
-    # Redirect button
-    if st.button("🚀 Click Here to Download", type="primary", use_container_width=True):
-        st.markdown("""
-        <script>
-        window.open('https://chzzkdownloader.com', '_blank');
-        </script>
-        """, unsafe_allow_html=True)
-        st.success("Redirecting to CHZZ Downloader...")
+    # Direct link button
+    st.link_button(
+        "🚀 Click Here to Download",
+        "https://chzzkdownloader.com",
+        use_container_width=True,
+        type="primary"
+    )
 
 # Additional info
 st.markdown("---")
