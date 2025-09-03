@@ -2,7 +2,7 @@ import streamlit as st
 
 # Page config
 st.set_page_config(
-    page_title="CHZZ VOD Downloader",
+    page_title="치지직 VOD 다운로더",
     page_icon="📺",
     layout="centered"
 )
@@ -31,17 +31,25 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Main content
-st.markdown('<h1 class="main-header">📺 CHZZ VOD Downloader</h1>', unsafe_allow_html=True)
-st.markdown('<p class="subtitle">Download your favorite CHZZ streams easily!</p>', unsafe_allow_html=True)
+st.markdown('<h1 class="main-header">📺 치지직 VOD 다운로더</h1>', unsafe_allow_html=True)
+st.markdown('<p class="subtitle">좋아하는 치지직 스트림을 쉽게 다운로드하세요!</p>', unsafe_allow_html=True)
 
 # Create columns for centering
 col1, col2, col3 = st.columns([1, 2, 1])
 
 with col2:
-    # Direct link button
+    # URL input field
+    url_input = st.text_input("Enter CHZZ VOD URL:", placeholder="https://chzzk.naver.com/...")
+    
+    # Direct link button with parameters
+    if url_input:
+        download_url = f"https://chzzkdownloader.com?from=streamlit&url={url_input}"
+    else:
+        download_url = "https://chzzkdownloader.com?from=streamlit"
+    
     st.link_button(
         "🚀 Click Here to Download",
-        "https://chzzkdownloader.com",
+        download_url,
         use_container_width=True,
         type="primary"
     )
