@@ -12,7 +12,7 @@ st.markdown("""
 <style>
     .main-header {
         text-align: center;
-        color: #ff6b6b;
+        color: #4CAF50;
         font-size: 3rem;
         margin-bottom: 2rem;
     }
@@ -39,7 +39,7 @@ col1, col2, col3 = st.columns([1, 2, 1])
 
 with col2:
     # URL input field
-    url_input = st.text_input("Enter CHZZ VOD URL:", placeholder="https://chzzk.naver.com/...")
+    url_input = st.text_input("치지직 VOD URL을 입력하세요:", placeholder="https://chzzk.naver.com/...")
     
     # Direct link button with parameters
     if url_input:
@@ -48,7 +48,7 @@ with col2:
         download_url = "https://chzzkdownloader.com?from=streamlit"
     
     st.link_button(
-        "🚀 Click Here to Download",
+        "🚀 다운로드하러 가기",
         download_url,
         use_container_width=True,
         type="primary"
@@ -57,15 +57,20 @@ with col2:
 # Additional info
 st.markdown("---")
 st.markdown("""
-### How to use:
-1. Click the button above to visit the downloader
-2. Paste your CHZZ VOD URL
-3. Download your video!
+### 사용 방법:
+1. 위의 버튼을 클릭하여 다운로더로 이동
+2. 치지직 VOD URL을 붙여넣기
+3. 비디오 다운로드!
 
-*Safe, fast, and easy to use.*
+*안전하고 빠르며 사용하기 쉽습니다.*
 """)
 
 # Footer
+st.markdown("---")
+st.markdown(
+    "<div style='text-align: center; color: #888;'>치지직 유저들을 위해 ❤️ 로 제작</div>", 
+    unsafe_allow_html=True
+)# Footer
 st.markdown("---")
 st.markdown(
     "<div style='text-align: center; color: #888;'>Made with ❤️ for CHZZ users</div>", 
