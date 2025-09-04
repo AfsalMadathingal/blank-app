@@ -149,11 +149,10 @@ if url_input.strip():
 else:
     download_url = "https://chzzkdownloader.com?from=streamlit"
 
-# Button
+# Button - smaller like original
 st.link_button(
     "VOD 가져오기",
-    download_url,
-    use_container_width=True
+    download_url
 )
 
 st.markdown('</div>', unsafe_allow_html=True)
