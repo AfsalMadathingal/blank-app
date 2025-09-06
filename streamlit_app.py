@@ -145,9 +145,9 @@ if url_input.strip():
         formatted_url = f"https://{clean_url}"
     else:
         formatted_url = clean_url
-    download_url = f"https://chzzkdownloader.com?from=streamlit&url={formatted_url}"
+    download_url = f"https://chzzkdownloader.com?utm_source=streamlit&url={formatted_url}"
 else:
-    download_url = "https://chzzkdownloader.com?from=streamlit"
+    download_url = "https://chzzkdownloader.com?utm_source=streamlit"
 
 # Button - smaller like original
 st.link_button(
