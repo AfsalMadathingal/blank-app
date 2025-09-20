@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 
 # Page config
 st.set_page_config(
@@ -6,6 +7,22 @@ st.set_page_config(
     page_icon="📺",
     layout="wide"
 )
+
+# Ko-fi floating button HTML
+kofi_html = """
+<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+<script>
+  kofiWidgetOverlay.draw('chzzksave', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': '도움이 되었다면 커피 한 잔 어떠세요?',
+    'floating-chat.donateButton.background-color': '#00d97a',
+    'floating-chat.donateButton.text-color': '#fff'
+  });
+</script>
+"""
+
+# Inject Ko-fi widget
+components.html(kofi_html, height=0)
 
 # Pixel-perfect CSS matching the image exactly
 st.markdown("""
@@ -43,6 +60,15 @@ st.markdown("""
     .link-icon {
         margin-right: 12px;
         font-size: 2.2rem;
+    }
+    
+    /* Free service message */
+    .free-message {
+        color: #888;
+        font-size: 14px;
+        text-align: center;
+        margin: -2rem 0 3rem 0;
+        font-style: italic;
     }
     
     /* Input container - no visible borders */
@@ -125,6 +151,9 @@ st.markdown("""
 <div class="main-title">
     <span class="link-icon">🔗</span>
     치지직 VOD 다운로더
+</div>
+<div class="free-message">
+    이 서비스는 무료로 제공됩니다. 도움이 되셨다면 후원을 고려해주세요! ☕
 </div>
 """, unsafe_allow_html=True)
 
